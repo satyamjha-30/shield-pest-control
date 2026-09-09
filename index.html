@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shield Pest Control — Delhi NCR</title>
+<meta name="description" content="Shield Pest Control — certified pest management for restaurants, hotels and homes across Delhi NCR. Cockroach, termite, rodent, mosquito & bed bug treatments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Archivo+Expanded:wght@700;800&family=Inter:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#152420;
+    --ink-soft:#3d4d47;
+    --paper:#EEF0E9;
+    --paper-raised:#F8F9F4;
+    --green:#1F3D2B;
+    --green-deep:#122B1C;
+    --sage:#8FA491;
+    --sage-line:#c9d2c4;
+    --gold:#C1832A;
+    --gold-soft:#e7c98f;
+    --alert:#A63E2B;
+    --radius-sm:3px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Archivo Expanded','Archivo', sans-serif;
+    font-weight:800;
+    color:var(--green-deep);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+  }
+  .mono{font-family:'DM Mono', monospace;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+  @media (max-width:640px){ .wrap{padding:0 20px;} }
+
+  ::selection{background:var(--gold-soft); color:var(--ink);}
+  :focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
+
+  /* subtle paper grain */
+  body::before{
+    content:"";
+    position:fixed; inset:0; pointer-events:none; z-index:9999;
+    opacity:0.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    border-bottom:1px solid var(--sage-line);
+    background:var(--paper);
+    position:sticky; top:0; z-index:100;
+  }
+  .topbar-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 0;
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-mark{
+    width:38px; height:38px; border-radius:50%;
+    border:2px solid var(--green-deep);
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .brand-mark svg{width:20px; height:20px;}
+  .brand-name{
+    font-family:'Archivo Expanded', sans-serif;
+    font-weight:800; font-size:17px; letter-spacing:-0.01em;
+    color:var(--green-deep);
+  }
+  .brand-name span{display:block; font-family:'DM Mono', monospace; font-weight:400; font-size:10.5px; letter-spacing:0.06em; color:var(--sage); text-transform:uppercase; margin-top:1px;}
+  .topbar-cta{
+    display:flex; gap:10px; align-items:center;
+  }
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:11px 20px;
+    font-family:'Inter', sans-serif; font-weight:600; font-size:14.5px;
+    border-radius:var(--radius-sm);
+    border:1.5px solid transparent;
+    cursor:pointer;
+    transition:transform .15s ease, background .15s ease, border-color .15s ease;
+    white-space:nowrap;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn-call{ background:var(--green-deep); color:var(--paper-raised); }
+  .btn-call:hover{ background:var(--green); }
+  .btn-wa{ background:transparent; color:var(--green-deep); border-color:var(--green-deep); }
+  .btn-wa:hover{ background:var(--green-deep); color:var(--paper-raised); }
+  .btn-gold{ background:var(--gold); color:var(--green-deep); }
+  .btn-gold:hover{ background:#a86e20; color:var(--paper-raised); }
+  .btn svg{width:17px; height:17px; flex-shrink:0;}
+  .topbar .btn{padding:9px 16px; font-size:13.5px;}
+  @media (max-width:720px){
+    .topbar-cta .btn-label{display:none;}
+    .topbar .btn{padding:9px 13px;}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:76px 0 64px;
+    border-bottom:1px solid var(--sage-line);
+    position:relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:56px;
+    align-items:center;
+  }
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr; gap:44px;} }
+
+  .eyebrow-row{
+    display:flex; align-items:center; gap:10px;
+    font-family:'DM Mono', monospace; font-size:12.5px; color:var(--sage);
+    margin-bottom:22px;
+  }
+  .eyebrow-row .dot{width:6px; height:6px; border-radius:50%; background:var(--alert);}
+
+  .hero h1{
+    font-size:clamp(34px, 5.4vw, 58px);
+    max-width:15ch;
+  }
+  .hero-sub{
+    margin-top:22px;
+    font-size:18px;
+    color:var(--ink-soft);
+    max-width:46ch;
+  }
+  .hero-actions{
+    margin-top:32px;
+    display:flex; gap:14px; flex-wrap:wrap;
+  }
+  .hero-actions .btn{padding:14px 24px; font-size:15.5px;}
+
+  .hero-trustline{
+    margin-top:30px;
+    display:flex; gap:26px; flex-wrap:wrap;
+    font-family:'DM Mono', monospace; font-size:12.5px; color:var(--ink-soft);
+  }
+  .hero-trustline b{color:var(--green-deep); font-weight:600;}
+
+  /* seal / certificate graphic */
+  .seal-card{
+    background:var(--paper-raised);
+    border:1px solid var(--sage-line);
+    padding:30px 28px 26px;
+    position:relative;
+  }
+  .seal-card::before{
+    content:"";
+    position:absolute; inset:8px;
+    border:1px dashed var(--sage-line);
+    pointer-events:none;
+  }
+  .seal-top{
+    display:flex; justify-content:space-between; align-items:flex-start;
+    font-family:'DM Mono', monospace; font-size:11px; color:var(--sage);
+    text-transform:uppercase; letter-spacing:0.06em;
+    margin-bottom:22px;
+  }
+  .seal-ring{
+    width:112px; height:112px; margin:0 auto 20px;
+    border-radius:50%;
+    border:2px solid var(--green-deep);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .seal-ring::after{
+    content:"";
+    position:absolute; inset:8px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+  }
+  .seal-ring svg{width:46px; height:46px;}
+  .seal-caption{
+    text-align:center;
+    font-family:'Archivo', sans-serif; font-weight:700; font-size:14.5px;
+    color:var(--green-deep);
+    letter-spacing:0.01em;
+  }
+  .seal-sub{
+    text-align:center;
+    font-family:'DM Mono', monospace; font-size:11px; color:var(--sage);
+    margin-top:4px;
+  }
+  .seal-checklist{
+    margin-top:24px;
+    border-top:1px solid var(--sage-line);
+    padding-top:18px;
+    display:grid; gap:10px;
+  }
+  .seal-checklist li{
+    list-style:none;
+    display:flex; align-items:center; gap:10px;
+    font-size:13.5px; color:var(--ink-soft);
+  }
+  .seal-checklist svg{width:15px; height:15px; color:var(--green); flex-shrink:0;}
+
+  /* ---------- Section heading pattern ---------- */
+  .section{padding:74px 0;}
+  .section-head{
+    display:grid; grid-template-columns:auto 1fr; align-items:end; gap:24px;
+    margin-bottom:42px;
+    border-bottom:1px solid var(--sage-line);
+    padding-bottom:20px;
+  }
+  .section-tag{
+    font-family:'DM Mono', monospace; font-size:12.5px; color:var(--sage);
+  }
+  .section-head h2{
+    font-size:clamp(26px, 3.4vw, 38px);
+    grid-column:1;
+  }
+  .section-head p{
+    grid-column:1;
+    color:var(--ink-soft);
+    max-width:56ch;
+    margin-top:12px;
+    font-size:15.5px;
+  }
+
+  /* ---------- Services ledger ---------- */
+  .ledger{border-top:1px solid var(--sage-line);}
+  .ledger-row{
+    display:grid;
+    grid-template-columns:52px 1fr auto;
+    gap:20px;
+    align-items:center;
+    padding:22px 0;
+    border-bottom:1px solid var(--sage-line);
+  }
+  .ledger-row:hover .ledger-icon{ background:var(--green-deep); }
+  .ledger-row:hover .ledger-icon svg{ color:var(--paper-raised); }
+  .ledger-icon{
+    width:44px; height:44px; border-radius:50%;
+    background:var(--paper-raised);
+    border:1.5px solid var(--green-deep);
+    display:flex; align-items:center; justify-content:center;
+    transition:background .18s ease;
+  }
+  .ledger-icon svg{width:21px; height:21px; color:var(--green-deep); transition:color .18s ease;}
+  .ledger-body h3{
+    font-family:'Archivo', sans-serif; font-size:18px; font-weight:700;
+    margin-bottom:4px;
+  }
+  .ledger-body p{color:var(--ink-soft); font-size:14.5px; max-width:52ch;}
+  .ledger-tag{
+    font-family:'DM Mono', monospace; font-size:11.5px; color:var(--sage);
+    text-align:right; white-space:nowrap;
+  }
+  @media (max-width:640px){
+    .ledger-row{grid-template-columns:44px 1fr; }
+    .ledger-tag{grid-column:2; text-align:left; margin-top:2px;}
+  }
+
+  /* ---------- Stats band ---------- */
+  .stats-band{
+    background:var(--green-deep);
+    color:var(--paper-raised);
+    padding:52px 0;
+  }
+  .stats-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:32px;
+  }
+  @media (max-width:800px){ .stats-grid{grid-template-columns:repeat(2,1fr); gap:36px 24px;} }
+  .stat-num{
+    font-family:'Archivo Expanded', sans-serif; font-weight:800;
+    font-size:clamp(30px,4vw,44px);
+    color:var(--gold-soft);
+  }
+  .stat-label{
+    font-family:'DM Mono', monospace; font-size:12px;
+    color:#c7d2c9; margin-top:6px; letter-spacing:0.02em;
+  }
+
+  /* ---------- Process ---------- */
+  .process-list{ counter-reset:step; border-top:1px solid var(--sage-line);}
+  .process-item{
+    counter-increment:step;
+    display:grid; grid-template-columns:80px 1fr; gap:24px;
+    padding:26px 0;
+    border-bottom:1px solid var(--sage-line);
+  }
+  .process-item::before{
+    content:counter(step, decimal-leading-zero);
+    font-family:'DM Mono', monospace;
+    font-size:26px; color:var(--gold);
+    font-weight:500;
+  }
+  .process-item h3{
+    font-family:'Archivo', sans-serif; font-size:19px; font-weight:700; margin-bottom:6px;
+  }
+  .process-item p{ color:var(--ink-soft); font-size:15px; max-width:60ch; }
+  @media (max-width:560px){
+    .process-item{grid-template-columns:1fr;}
+    .process-item::before{margin-bottom:6px;}
+  }
+
+  /* ---------- Clients strip ---------- */
+  .clients-strip{
+    border-top:1px solid var(--sage-line);
+    border-bottom:1px solid var(--sage-line);
+    padding:26px 0;
+  }
+  .clients-strip .wrap{
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    justify-content:space-between;
+  }
+  .clients-label{
+    font-family:'DM Mono', monospace; font-size:12px; color:var(--sage);
+    text-transform:uppercase; letter-spacing:0.06em;
+  }
+  .clients-types{
+    display:flex; gap:10px; flex-wrap:wrap;
+  }
+  .client-pill{
+    font-family:'Inter', sans-serif; font-size:13px; font-weight:600;
+    padding:7px 14px; border:1px solid var(--sage-line); border-radius:999px;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- Testimonial ---------- */
+  .testi{
+    display:grid; grid-template-columns:1fr 1fr; gap:48px;
+  }
+  @media (max-width:800px){ .testi{grid-template-columns:1fr; gap:32px;} }
+  .testi-card{
+    background:var(--paper-raised);
+    border:1px solid var(--sage-line);
+    padding:28px;
+  }
+  .testi-quote{
+    font-family:'Archivo', sans-serif; font-size:17px; font-weight:600;
+    color:var(--green-deep); line-height:1.45;
+  }
+  .testi-who{
+    margin-top:16px;
+    font-family:'DM Mono', monospace; font-size:12.5px; color:var(--sage);
+  }
+
+  /* ---------- Contact / CTA band ---------- */
+  .cta-band{
+    background:var(--green-deep);
+    color:var(--paper-raised);
+    padding:70px 0;
+  }
+  .cta-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr;
+    gap:52px; align-items:center;
+  }
+  @media (max-width:900px){ .cta-grid{grid-template-columns:1fr; gap:40px;} }
+  .cta-grid h2{ color:var(--paper-raised); font-size:clamp(28px,4vw,42px); max-width:14ch;}
+  .cta-grid p{ color:#c7d2c9; margin-top:16px; max-width:48ch; font-size:16px;}
+  .cta-actions{ margin-top:30px; display:flex; gap:14px; flex-wrap:wrap;}
+  .cta-actions .btn{padding:15px 26px; font-size:16px;}
+  .cta-actions .btn-call{background:var(--gold); color:var(--green-deep);}
+  .cta-actions .btn-call:hover{background:var(--gold-soft);}
+  .cta-actions .btn-wa{border-color:var(--paper-raised); color:var(--paper-raised);}
+  .cta-actions .btn-wa:hover{background:var(--paper-raised); color:var(--green-deep);}
+
+  .qr-panel{
+    background:var(--paper-raised);
+    padding:26px; text-align:center;
+    border:1px solid var(--sage-line);
+  }
+  .qr-panel img{ width:180px; height:180px; margin:0 auto 14px; border:1px solid var(--sage-line); padding:10px; background:#fff;}
+  .qr-panel .qr-cap{
+    font-family:'DM Mono', monospace; font-size:12px; color:var(--sage);
+    text-transform:uppercase; letter-spacing:0.05em;
+  }
+  .qr-panel .qr-title{
+    font-family:'Archivo', sans-serif; font-weight:700; font-size:15px; color:var(--green-deep);
+    margin-top:8px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{ padding:36px 0; }
+  .footer-grid{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;
+    font-family:'DM Mono', monospace; font-size:12.5px; color:var(--sage);
+  }
+  .footer-grid a{ color:var(--ink-soft); }
+  .footer-grid a:hover{ color:var(--green-deep); }
+
+  /* ---------- Sticky mobile action bar ---------- */
+  .mobile-bar{
+    display:none;
+    position:fixed; bottom:0; left:0; right:0; z-index:200;
+    background:var(--green-deep);
+    border-top:1px solid var(--gold);
+  }
+  .mobile-bar .wrap{
+    display:flex; gap:1px; padding:0;
+  }
+  .mobile-bar a{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 10px;
+    font-family:'Inter',sans-serif; font-weight:700; font-size:14.5px;
+    color:var(--paper-raised);
+  }
+  .mobile-bar a:first-child{ background:var(--gold); color:var(--green-deep); }
+  .mobile-bar svg{width:18px; height:18px;}
+  @media (max-width:720px){
+    .mobile-bar{display:block;}
+    body{padding-bottom:58px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#152420" stroke-width="1.8"><path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z"/><path d="M9 12.5 L11 14.5 L15.5 9.5"/></svg>
+      </div>
+      <div class="brand-name">Shield Pest Control<span>Delhi NCR</span></div>
+    </div>
+    <div class="topbar-cta">
+      <a href="tel:+918700495737" class="btn btn-wa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="btn-label">Call</span></a>
+      <a href="https://wa.me/918700495737?text=Hi%20Shield%20Pest%20Control%2C%20I%27d%20like%20a%20quote%20for%20pest%20control%20service." target="_blank" rel="noopener" class="btn btn-call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.55 3.71-8.26 8.27-8.26 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.85c0 4.56-3.71 8.23-8.28 8.23zm4.53-6.19c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.24-.86.85-.86 2.06 0 1.22.88 2.4 1 2.56.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg><span class="btn-label">WhatsApp</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow-row"><span class="dot"></span> Licensed pest management · Delhi NCR</div>
+      <h1>Restaurants across Delhi NCR trust Shield to keep pests out — and inspectors satisfied.</h1>
+      <p class="hero-sub">We handle cockroaches, rodents, termites, mosquitoes and bed bugs for kitchens, hotels, offices and homes — with treatment records you can show an FSSAI inspector without breaking a sweat.</p>
+      <div class="hero-actions">
+        <a href="tel:+918700495737" class="btn btn-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call 87004 95737</a>
+        <a href="https://wa.me/918700495737?text=Hi%20Shield%20Pest%20Control%2C%20I%27d%20like%20a%20quote%20for%20pest%20control%20service." target="_blank" rel="noopener" class="btn btn-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.55 3.71-8.26 8.27-8.26 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.85c0 4.56-3.71 8.23-8.28 8.23zm4.53-6.19c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.24-.86.85-.86 2.06 0 1.22.88 2.4 1 2.56.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>WhatsApp Us</a>
+      </div>
+      <div class="hero-trustline">
+        <div><b>7+ yrs</b> in trade</div>
+        <div><b>500+</b> sites serviced</div>
+        <div><b>24–48 hr</b> response</div>
+        <div><b>AMC</b> for restaurants &amp; hotels</div>
+      </div>
+    </div>
+
+    <div class="seal-card">
+      <div class="seal-top"><span>Service Record</span><span>Shield / Delhi NCR</span></div>
+      <div class="seal-ring">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#152420" stroke-width="1.6"><path d="M12 2 L20 6 V12 C20 17 16.5 20.5 12 22 C7.5 20.5 4 17 4 12 V6 Z"/><path d="M9 12.5 L11 14.5 L15.5 9.5"/></svg>
+      </div>
+      <div class="seal-caption">Certified Pest Protection</div>
+      <div class="seal-sub">Trained applicators · logged treatments</div>
+      <ul class="seal-checklist">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Kitchen-safe, low-odour chemicals</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Treatment certificate on request</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Free re-visit if pests return</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">01 — What we treat</div>
+        <h2>A full pest control menu, one call away.</h2>
+        <p>From a single cockroach problem to a full annual maintenance contract for your restaurant chain — we scope the visit to what your space actually needs.</p>
+      </div>
+    </div>
+
+    <div class="ledger">
+      <div class="ledger-row">
+        <div class="ledger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><ellipse cx="12" cy="13" rx="7" ry="4.5"/><path d="M12 8.5V5M9 5l-1.5-2M15 5l1.5-2M6 11l-3-1M18 11l3-1M6 15l-3 1M18 15l3 1"/></svg></div>
+        <div class="ledger-body">
+          <h3>Cockroach Control</h3>
+          <p>Gel baiting and residual spray for kitchens, drains and storage areas — built around service hours, not against them.</p>
+        </div>
+        <div class="ledger-tag">Restaurants · Homes</div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V10l6-5 6 5v10M9 20v-6h6v6"/></svg></div>
+        <div class="ledger-body">
+          <h3>Termite Treatment</h3>
+          <p>Pre- and post-construction anti-termite treatment with soil and wood-drilling methods for lasting protection.</p>
+        </div>
+        <div class="ledger-tag">Offices · Homes · New builds</div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="10" r="4"/><path d="M9 13.5c-3 1-4.5 3-4.5 6.5M15 13.5c3 1 4.5 3 4.5 6.5"/><path d="M12 6V3"/></svg></div>
+        <div class="ledger-body">
+          <h3>Rodent Control</h3>
+          <p>Bait stations, snap traps and entry-point sealing to shut down rats and mice without risking a customer sighting one.</p>
+        </div>
+        <div class="ledger-tag">Restaurants · Warehouses</div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="2"/><path d="M12 4v2M12 18v2M4 12h2M18 12h2M6.3 6.3l1.4 1.4M16.3 16.3l1.4 1.4M17.7 6.3l-1.4 1.4M7.7 16.3l-1.4 1.4"/></svg></div>
+        <div class="ledger-body">
+          <h3>Mosquito Fogging</h3>
+          <p>Thermal and cold fogging for outdoor seating, terraces and common areas — timed around your guests, not around us.</p>
+        </div>
+        <div class="ledger-tag">Restaurants · Housing societies</div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="8" width="18" height="9" rx="1.5"/><path d="M6 8V6.5A2.5 2.5 0 0 1 8.5 4h7A2.5 2.5 0 0 1 18 6.5V8M3 17v2M21 17v2"/></svg></div>
+        <div class="ledger-body">
+          <h3>Bed Bug Treatment</h3>
+          <p>Heat and chemical treatment for hotel rooms, guest houses and homes, with a follow-up check built into every visit.</p>
+        </div>
+        <div class="ledger-tag">Hotels · Guest houses</div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3c3 3 5 6.5 5 10a5 5 0 0 1-10 0c0-3.5 2-7 5-10z"/></svg></div>
+        <div class="ledger-body">
+          <h3>General Pest &amp; Fumigation</h3>
+          <p>Ants, spiders, silverfish and stored-grain pests — plus full-space fumigation for closures, deep cleans and handovers.</p>
+        </div>
+        <div class="ledger-tag">All properties</div>
+      </div>
+
+      <div class="ledger-row">
+        <div class="ledger-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3h6l1 4H8l1-4z"/><path d="M6 7h12l-1 13a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1L6 7z"/><path d="M10 11v6M14 11v6"/></svg></div>
+        <div class="ledger-body">
+          <h3>Restaurant &amp; Kitchen Compliance Packages</h3>
+          <p>Monthly or quarterly AMC visits with logged treatment records, built to hold up during an FSSAI or hygiene audit.</p>
+        </div>
+        <div class="ledger-tag">Restaurants · Hotels · Cloud kitchens</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<div class="stats-band">
+  <div class="wrap stats-grid">
+    <div><div class="stat-num">7+</div><div class="stat-label">Years in pest management</div></div>
+    <div><div class="stat-num">500+</div><div class="stat-label">Sites serviced across Delhi NCR</div></div>
+    <div><div class="stat-num">24–48h</div><div class="stat-label">Typical response window</div></div>
+    <div><div class="stat-num">100%</div><div class="stat-label">Re-visit if pests return</div></div>
+  </div>
+</div>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">02 — How a visit works</div>
+        <h2>Four steps, start to sign-off.</h2>
+        <p>Every job — from a one-off cockroach spray to a full restaurant AMC — follows the same sequence, so you always know what's next.</p>
+      </div>
+    </div>
+    <div class="process-list">
+      <div class="process-item">
+        <h3>Inspect</h3>
+        <p>We walk the site — kitchen, storage, drains, seating — and identify the pest, the entry points and the risk areas before quoting anything.</p>
+      </div>
+      <div class="process-item">
+        <h3>Treat</h3>
+        <p>Targeted treatment using kitchen-safe products where food is involved, scheduled around your service hours wherever possible.</p>
+      </div>
+      <div class="process-item">
+        <h3>Document</h3>
+        <p>You get a service record with product, method and date used — the same paperwork an FSSAI or hygiene inspector will ask for.</p>
+      </div>
+      <div class="process-item">
+        <h3>Follow up</h3>
+        <p>A scheduled re-check, or a standing AMC visit, so a treated site stays a treated site — not a repeat call six weeks later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLIENTS STRIP ============ -->
+<div class="clients-strip">
+  <div class="wrap">
+    <span class="clients-label">Who we work with</span>
+    <div class="clients-types">
+      <span class="client-pill">Restaurants</span>
+      <span class="client-pill">Hotels &amp; guest houses</span>
+      <span class="client-pill">Cloud kitchens</span>
+      <span class="client-pill">Cafés &amp; bakeries</span>
+      <span class="client-pill">Offices</span>
+      <span class="client-pill">Housing societies</span>
+      <span class="client-pill">Homes</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="section-tag">03 — On record</div>
+        <h2>What clients say after a visit.</h2>
+      </div>
+    </div>
+    <div class="testi">
+      <div class="testi-card">
+        <p class="testi-quote">"They scheduled the kitchen treatment after our closing hours and left the paperwork we needed for our next hygiene audit. No disruption at all."</p>
+        <div class="testi-who">— Restaurant owner, Connaught Place</div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">"Had a rat problem near the storage area for weeks. Shield sealed the entry points and it's been clean for two months now."</p>
+        <div class="testi-who">— Café manager, Gurugram</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / CTA ============ -->
+<div class="cta-band" id="contact">
+  <div class="wrap cta-grid">
+    <div>
+      <h2>Get a pest-free site, on your schedule.</h2>
+      <p>Call for a same-day quote, or message on WhatsApp with your address and the pest you're dealing with — we'll tell you what a visit costs before we show up.</p>
+      <div class="cta-actions">
+        <a href="tel:+918700495737" class="btn btn-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call 87004 95737</a>
+        <a href="https://wa.me/918700495737?text=Hi%20Shield%20Pest%20Control%2C%20I%27d%20like%20a%20quote%20for%20pest%20control%20service." target="_blank" rel="noopener" class="btn btn-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.55 3.71-8.26 8.27-8.26 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.85c0 4.56-3.71 8.23-8.28 8.23zm4.53-6.19c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.24-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43-.14-.01-.31-.01-.48-.01-.16 0-.43.06-.66.31-.23.24-.86.85-.86 2.06 0 1.22.88 2.4 1 2.56.12.17 1.74 2.66 4.22 3.73.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>WhatsApp Us</a>
+      </div>
+    </div>
+    <div class="qr-panel">
+      <img src="shield-pest-control-qr.png" alt="QR code linking to Shield Pest Control website">
+      <div class="qr-title">Scan to save our details</div>
+      <div class="qr-cap">Print this on your visiting card</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap footer-grid">
+    <div>Shield Pest Control · Delhi NCR</div>
+    <div><a href="tel:+918700495737">+91 87004 95737</a></div>
+    <div>Service area: Delhi · Gurugram · Noida · Faridabad · Ghaziabad</div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE BAR ============ -->
+<div class="mobile-bar">
+  <div class="wrap">
+    <a href="tel:+918700495737">Call Now</a>
+    <a href="https://wa.me/918700495737?text=Hi%20Shield%20Pest%20Control%2C%20I%27d%20like%20a%20quote%20for%20pest%20control%20service." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</div>
+
+</body>
+</html>
